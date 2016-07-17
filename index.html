@@ -1,0 +1,51 @@
+{{template "header.html" .}}
+
+<p style="text-align:center"><img src="./images/bounce.png"/></p>
+
+<p>Hi! This is a prototype application that let's you login with Ricochet! Simply enter your Ricochet Id to receive a code.</p>
+
+<form action="login">
+<label for="address"><strong>ricochet:</strong></label><input name="address"/>
+<input type="submit" value="login!"/>
+</form>
+
+<h1>What is Bounce?</h1>
+
+<p><strong>Bounce</strong> is an experimental authentication prototype. Bounce
+uses <a href="https://ricochet.im">Ricochet</a> as a means to offer authenticated 
+pseudonyms!</p>
+
+This has several advantages over traditional user management solutions:
+
+<ul>
+    <li><strong>Anonymity</strong> - Using the power of Ricochet and Tor, the user can
+    disassociate themselves from the account, without having to setup an anonymous
+    email account - which is often fraught with difficulties.</li>
+    <li><strong>No Passwords</strong> - Authentication is provided through the authentication properties of Tor
+    Hidden Services (through Ricochet). Of course, there is nothing to stop someone extending Bounce
+    to also ask for another authentication factor! Which brings us to...</li>
+    <li><strong>Decentralization</strong> - Anyone can run a Bounce server, allowing users to pick
+    and choose which entities get to know which of their ricochet addresses. Sites
+    do not have to rely 3rd party providers to allow a consistent user experience across different
+    sites.</li>
+</ul>
+
+<h1>How does Bounce Work?</h1>
+
+<p style="text-align:center"><img src="./images/bounce-screen.png"/></p>
+
+<p><strong>Bounce</strong> is fairly simple. First the user is asked for a 
+ricochet id. Bounce then constructs an encrypted token and sends a message
+to the ricochet id. Finally the user copies that id back to the site, and
+the site valids that the token is valid</p>
+
+<h1>Is the Source Code Available?</h1>
+
+<p>Sure, the source code for Bounce is available at <a href="https://github.com/s-rah/bounce"/>GitHub</a></p>
+
+<p>Bounce is based on <a href="https://github.com/s-rah/go-ricochet"/>go-ricochet</a></p>
+
+
+<p>Bounce is created by <a href="https://sarahjamielewis.com">Sarah Jamie Lewis</a>
+
+</html>
